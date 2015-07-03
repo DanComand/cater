@@ -22,6 +22,14 @@ class ReviewsController < ApplicationController
     @review.destroy
   end
 
+  def average_rating
+    if self.reviews.size > 0
+        self.reviews.average(:rating)
+    else
+        'undefined'
+    end
+  end
+
   private
   def review_params
     params.require(:review).permit(:comment, :rating, :meal_id)

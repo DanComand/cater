@@ -18,11 +18,15 @@
       </div>
     <% end %>
 
-    <%= f.radio_button :rating, '1' %> 1<br />
-    <%= f.radio_button :rating, '2' %> 2<br />
-    <%= f.radio_button :rating, '3' %> 3<br />
-    <%= f.radio_button :rating, '4' %> 4<br />
-    <%= f.radio_button :rating, '5' %> 5<br />
+    <%= f.radio_button :rating, '1' %> 1
+    <%= f.radio_button :rating, '2' %> 2
+    <%= f.radio_button :rating, '3' %> 3
+    <%= f.radio_button :rating, '4' %> 4
+    <%= f.radio_button :rating, '5' %> 5
+
+    <% @reviews.each do |review| %>
+    <%= review.average_rating %>
+  <% end %>
 
     <div class="field">
       <%= f.label :comment %><br />
