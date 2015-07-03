@@ -23,11 +23,11 @@
     <%= f.radio_button :rating, '3' %> 3
     <%= f.radio_button :rating, '4' %> 4
     <%= f.radio_button :rating, '5' %> 5
-
-    <% @reviews.each do |review| %>
-    <%= review.average_rating %>
+<p>
+    <% @meal.reviews.each do |review| %>
+    <%= review.rating.to_i %>
   <% end %>
-
+</p>
     <div class="field">
       <%= f.label :comment %><br />
       <%= f.text_area :comment %>
