@@ -18,20 +18,17 @@
       </div>
     <% end %>
 
-<!-- Review Form -->
-<div class="field">
-<%= radio_button_tag(:rating, "1") %>
-<%= label_tag(:rating, "1") %>
-<%= radio_button_tag(:rating, "2") %>
-<%= label_tag(:rating, "2") %>
-</div>
-
-
+    <%= f.radio_button :rating, '1' %> 1<br />
+    <%= f.radio_button :rating, '2' %> 2<br />
+    <%= f.radio_button :rating, '3' %> 3<br />
+    <%= f.radio_button :rating, '4' %> 4<br />
+    <%= f.radio_button :rating, '5' %> 5<br />
 
     <div class="field">
       <%= f.label :comment %><br />
       <%= f.text_area :comment %>
     </div>
+
     <div class="actions">
       <%= f.submit %>
     </div>
