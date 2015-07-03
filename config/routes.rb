@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :meals
   resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]
 
