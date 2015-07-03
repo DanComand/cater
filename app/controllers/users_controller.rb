@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @meal = Meal.all
+    @meals = Meal.all
   end
 
   def create

@@ -1,7 +1,6 @@
 <%= @user.companyName %> by <%= @user.firstName %> <%= @user.lastName %>
 <p>Your Meals</p>
 
-<% @user.meals.each do |meal| %>
-	<p><%= meal.name %></p>
+<% @meals.each do |meal| %>
+	<p><%= link_to meal.name, "/meals/#{meal.id}" %></p>
 <% end %>
-
