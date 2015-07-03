@@ -6,7 +6,7 @@ class MealsController < ApplicationController
   def show
     @meal = Meal.find(params[:id])
     if current_user
-      @review = @product.reviews.build
+      @review = @meal.reviews.build
     end
   end
 
