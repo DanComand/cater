@@ -5,6 +5,9 @@ class MealsController < ApplicationController
 
   def show
     @meal = Meal.find(params[:id])
+    if current_user
+      @review = @product.reviews.build
+    end
   end
 
   def new
