@@ -1,4 +1,5 @@
- <h3>Reviews</h3>
+ <h3><%= @meal.name %></h3>
+ <h3><%= @meal.description %></h3>
 
   <p>Reviews for <%= @meal.name %></p>
 
@@ -7,8 +8,8 @@
       <%= review.comment %>
       <br>
       <% if review.user != nil %>
-        <em> by <%= review.user.email %></em>
-        Added on: <%= review.created_at %>
+        Reviewed by <em><%= review.user.firstName %></em>
+			on <%= review.created_at.strftime("%B %d, %Y")  %>
       <% end %>
     </p>
   <% end %>
