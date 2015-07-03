@@ -1,6 +1,7 @@
 class MealsController < ApplicationController
   def index
     @meals = Meal.all
+     @meal = Meal.new
   end
 
   def show

@@ -1,5 +1,6 @@
+<%= render 'form' %>
+
+
 <% @meals.each do |meal| %>
-
-	<%= link_to meal.name, "/meals/#{meal.id}" %>
-
+	<p><%= link_to meal.name, "/meals/#{meal.id}" %></p>
 <% end %>
