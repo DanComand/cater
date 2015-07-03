@@ -3,6 +3,7 @@ class ReviewsController < ApplicationController
 
   def show
     @review = Review.find(params[:id])
+    @rating_average = review.rating.average
   end
 
   def create
