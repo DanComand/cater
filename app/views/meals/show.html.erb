@@ -19,7 +19,13 @@
     <% end %>
 
 <!-- Review Form -->
-<input id="rock" name="rock" type="checkbox" value="1" />
+<div class="field">
+<%= radio_button_tag(:rating, "1") %>
+<%= label_tag(:rating, "1") %>
+<%= radio_button_tag(:rating, "2") %>
+<%= label_tag(:rating, "2") %>
+</div>
+
 
 
     <div class="field">
