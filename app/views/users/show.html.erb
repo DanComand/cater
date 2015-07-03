@@ -1,2 +1,7 @@
-<%= @user.firstName %> <%= @user.lastName %>
+<%= @user.companyName %> by <%= @user.firstName %> <%= @user.lastName %>
+<p>Your Meals</p>
+
+<% @user.meals.each do |meal| %>
+	<p><%= meal.name %></p>
+<% end %>
 
